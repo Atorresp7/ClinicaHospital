@@ -41,7 +41,7 @@ public class Medico extends Persona{
     }
     
     public void atender(Consulta c){
-        
+        System.out.println(c.toString());
     }
 
     @Override
