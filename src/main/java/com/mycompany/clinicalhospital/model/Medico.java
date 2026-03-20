@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-package com.mycompany.clinicalhospital;
+package com.mycompany.clinicalhospital.model;
+
+import com.mycompany.clinicalhospital.model.Persona;
 
 /**
  *
@@ -37,10 +39,14 @@ public class Medico extends Persona{
     public void setTarjetaProfesional(String tarjetaProfesional) {
         this.tarjetaProfesional = tarjetaProfesional;
     }
+    
+    public void atender(Consulta c){
+        
+    }
 
     @Override
     public String toString() {
-        return "Medico{" + "especialidad=" + especialidad + ", tarjetaProfesional=" + tarjetaProfesional + '}';
+        return super.toString()+"\nEspecialidad: " + especialidad + "\nTarjeta Profesional: " + tarjetaProfesional + '}';
     }
                
 }

@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-package com.mycompany.clinicalhospital;
+package com.mycompany.clinicalhospital.model;
 
 /**
  *
@@ -27,7 +27,9 @@ public class Persona {
     }
     
     public void setNombre(String nombre){
-        this.nombre = nombre;
+        if(!nombre.isEmpty()){
+            this.nombre = nombre;
+        }
     }
     
     public int getEdad(){
@@ -35,7 +37,9 @@ public class Persona {
     }
     
     public void setEdad(int edad){
-        this.edad = edad;
+        if(edad >= 0 && edad<=120){
+           this.edad = edad; 
+        }
     }
     
     public String getCedula(){
@@ -43,12 +47,14 @@ public class Persona {
     }
     
     public void setCedula(String cedula){
-        this.cedula = cedula;
+        if(!cedula.isEmpty()){
+            this.cedula = cedula;
+        }
     }
 
     @Override
     public String toString() {
-        return "\n\tPersona \nNombre=" + nombre + "\nEdad=" + edad + "\nCedula=" + cedula;
+        return "\n\tPersona \nNombre: " + nombre + "\nEdad: " + edad + "\nCedula: " + cedula;
     }
     
     
