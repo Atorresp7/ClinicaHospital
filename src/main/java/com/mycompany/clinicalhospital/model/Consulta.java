@@ -13,6 +13,7 @@ public class Consulta {
     private String fecha;
     private String motivo;
     private String diagnostico;
+    private int duracionMinutos;
 
     public String getFecha() {
         return fecha;
@@ -40,7 +41,10 @@ public class Consulta {
 
     @Override
     public String toString() {
-        return "\n\tHistoria Clinica\n\tConsulta\nFecha: " + fecha + "\nMotivo: " + motivo + "\nDiagnostico: " + diagnostico + '}';
+        return "\n\tHistoria Clinica\n\tConsulta\nFecha: " + fecha + 
+                "\nMotivo: " + motivo + 
+                "\nDiagnostico: " + diagnostico +
+                "\nDuracion: " + duracionMinutos + "Min";
     }
     
     

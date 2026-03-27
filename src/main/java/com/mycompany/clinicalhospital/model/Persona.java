@@ -13,13 +13,15 @@ public class Persona {
     private String nombre;
     private int edad;
     private String cedula;
+    private String telefono;
     
     public Persona(){}
     
-    public Persona(String nombre, int edad, String cedula){
+    public Persona(String nombre, int edad, String cedula, String telefono){
         this.nombre = nombre;
         this.edad = edad;
         this.cedula = cedula;
+        this.telefono = telefono;
     }
     
     public String getNombre(){
@@ -51,10 +53,19 @@ public class Persona {
             this.cedula = cedula;
         }
     }
+    
+    public String getTelefono(){
+        return telefono;
+    }
+    
+    public void setTelefono(String telefono){
+        this.telefono = telefono;
+    }
 
     @Override
     public String toString() {
-        return "\n\tPersona \nNombre: " + nombre + "\nEdad: " + edad + "\nCedula: " + cedula;
+        return "\n\tPersona \nNombre: " + nombre + "\nEdad: " + edad + "\nCedula: " + cedula
+                 + "\nTelefono: " + telefono;
     }
     
     

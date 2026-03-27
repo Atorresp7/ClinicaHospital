@@ -14,12 +14,13 @@ import com.mycompany.clinicalhospital.model.Persona;
 public class Medico extends Persona{
     private String especialidad;
     private String tarjetaProfesional;
+    private int consultorio;
 
     public Medico() {
     }
 
-    public Medico(String especialidad, String tarjetaProfesional, String nombre, int edad, String cedula) {
-        super(nombre, edad, cedula);
+    public Medico(String nombre, int edad, String cedula, String telefono, String especialidad, String tarjetaProfesional) {
+        super(nombre, edad, cedula, telefono);
         this.especialidad = especialidad;
         this.tarjetaProfesional = tarjetaProfesional;
     }
@@ -44,9 +45,19 @@ public class Medico extends Persona{
         System.out.println(c.toString());
     }
 
+    public int getConsultorio() {
+        return consultorio;
+    }
+
+    public void setConsultorio(int consultorio) {
+        this.consultorio = consultorio;
+    }
+    
     @Override
     public String toString() {
-        return super.toString()+"\nEspecialidad: " + especialidad + "\nTarjeta Profesional: " + tarjetaProfesional + '}';
+        return super.toString()+"\nEspecialidad: " + especialidad + 
+                "\nTarjeta Profesional: " + tarjetaProfesional + 
+                "\nConsultorio No." + consultorio;
     }
                
 }
