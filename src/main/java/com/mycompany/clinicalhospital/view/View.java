@@ -50,5 +50,21 @@ public class View {
         m1.atender(hospital.getConsulta(0));
         System.out.println("-".repeat(50));
         m2.atender(hospital.getConsulta(1));
+        //lista de consultas
+        hospital.listarConsultas();
+        
+        //tueno y consultorio
+        m1.presentarse();
+        m2.presentarse();
+        
+        
+        m1.setConsultorio(20);
+        hospital.getConsulta(2).setDiagnostico("Gripe");
+        m2.setTarjetaProfesional("Vencida");
+        
+        
+        System.out.println("El Medico: " + m2.getNombre()+ "Tiene Tarjeta profesional" + m2.getTarjetaProfesional());
+        System.out.println("Luego de estudios se diagostico : "+ hospital.getConsulta(2).getDiagnostico());
+        
     }
 }

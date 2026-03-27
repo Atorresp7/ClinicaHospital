@@ -56,6 +56,10 @@ public class Medico extends Persona{
         this.consultorio = consultorio;
     }
     
+    public void presentarse(){
+        System.out.println("Turno No." + ((int)(Math.random()*101))+ " Consultorio No." + consultorio);       
+    }
+    
     @Override
     public String toString() {
         return super.toString()+"\nEspecialidad: " + especialidad + 

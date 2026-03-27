@@ -41,14 +41,6 @@ public class Hospital {
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
-
-    public ArrayList<Consulta> getConsulta() {
-        return consultas;
-    }
-
-    public void setConsulta(ArrayList<Consulta> consultas) {
-        this.consultas = consultas;
-    }
     
     //reglas del negocio
     public void registrarConsulta(Consulta c){
@@ -57,5 +49,12 @@ public class Hospital {
     
     public Consulta getConsulta(int i){
         return consultas.get(i);
-    }    
+    }
+    
+    public void listarConsultas(){
+        System.out.println("\n\n\tLista Historia Clinica");
+        for(Consulta c:consultas){
+            System.out.println(c + "\n" + "-".repeat(50));
+        }
+    }
 }
