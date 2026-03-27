@@ -14,6 +14,17 @@ public class Consulta {
     private String motivo;
     private String diagnostico;
     private int duracionMinutos;
+    
+    public Consulta(){
+        
+    }
+
+    public Consulta(String fecha, String motivo, String diagnostico, int duracionMinutos) {
+        this.fecha = fecha;
+        this.motivo = motivo;
+        this.diagnostico = diagnostico;
+        this.duracionMinutos = duracionMinutos;
+    }
 
     public String getFecha() {
         return fecha;
